@@ -1,11 +1,289 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My App</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My DevOps Learning Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+        }
+        
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .learning-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .learning-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .card-title {
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .card-content {
+            color: #5a6c7d;
+            text-align: center;
+        }
+        
+        .progress-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        
+        .progress-title {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .skill {
+            margin-bottom: 20px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #34495e;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.3s ease;
+        }
+        
+        .jenkins { background: linear-gradient(90deg, #ff6b6b, #ee5a24); }
+        .github { background: linear-gradient(90deg, #2ed573, #1e90ff); }
+        .maven { background: linear-gradient(90deg, #ffa726, #ff7043); }
+        .tomcat { background: linear-gradient(90deg, #ab47bc, #8e24aa); }
+        
+        .footer {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .footer h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .footer p {
+            color: #7f8c8d;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            .learning-card, .header, .progress-section, .footer {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My App</h1>
-    <p>Your web application is running successfully!</p>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 My DevOps Learning Journey</h1>
+            <p>Exploring the world of automation, deployment, and continuous integration in my homelab</p>
+        </div>
+        
+        <div class="learning-grid">
+            <div class="learning-card">
+                <div class="card-icon">🔧</div>
+                <h3 class="card-title">Jenkins CI/CD</h3>
+                <div class="card-content">
+                    <p>Learning to automate builds and deployments with Jenkins pipelines. Setting up automated testing and continuous integration workflows in my homelab environment.</p>
+                </div>
+            </div>
+            
+            <div class="learning-card">
+                <div class="card-icon">📚</div>
+                <h3 class="card-title">GitHub & Git</h3>
+                <div class="card-content">
+                    <p>Mastering version control with Git and GitHub. Learning branching strategies, pull requests, and collaborative development workflows.</p>
+                </div>
+            </div>
+            
+            <div class="learning-card">
+                <div class="card-icon">🏗️</div>
+                <h3 class="card-title">Apache Maven</h3>
+                <div class="card-content">
+                    <p>Understanding project build automation with Maven. Learning dependency management, build lifecycles, and creating WAR files for deployment.</p>
+                </div>
+            </div>
+            
+            <div class="learning-card">
+                <div class="card-icon">🐱</div>
+                <h3 class="card-title">Apache Tomcat</h3>
+                <div class="card-content">
+                    <p>Deploying Java web applications on Tomcat server. Learning servlet containers, web.xml configuration, and application deployment strategies.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="progress-section">
+            <h2 class="progress-title">📊 Learning Progress</h2>
+            
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Jenkins Pipeline</span>
+                    <span>Beginner</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill jenkins" style="width: 25%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Git & GitHub</span>
+                    <span>Learning</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill github" style="width: 40%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Maven Build Tool</span>
+                    <span>Beginner</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill maven" style="width: 30%;"></div>
+                </div>
+            </div>
+            
+            <div class="skill">
+                <div class="skill-name">
+                    <span>Tomcat Deployment</span>
+                    <span>Just Started</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill tomcat" style="width: 20%;"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <h3>🏠 Homelab Journey</h3>
+            <p>This application is running on my homelab setup, showcasing the integration of multiple DevOps tools. Every deployment is a new learning experience!</p>
+            <p style="margin-top: 10px; font-size: 0.9em; color: #95a5a6;">
+                Built with Maven • Deployed on Tomcat • Automated with Jenkins • Versioned with Git
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.learning-card');
+            
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                }, index * 200);
+            });
+            
+            // Animate progress bars
+            setTimeout(() => {
+                const progressBars = document.querySelectorAll('.progress-fill');
+                progressBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 500);
+                });
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
